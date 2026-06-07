@@ -1,0 +1,155 @@
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-input-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.3);
+}
+
+.loading {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1db954;
+  font-size: 0.9rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.track-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.track-item:hover {
+  background: rgba(0, 0, 0, 0.4);
+  transform: translateX(5px);
+}
+
+.track-thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.track-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.track-details h3 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-artist {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.play-icon {
+  color: #1db954;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.track-item:hover .play-icon {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  .track-thumbnail {
+    width: 45px;
+    height: 45px;
+  }
+
+  .track-details h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .track-item {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .track-thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+
+  .track-details h3 {
+    font-size: 0.85rem;
+  }
+
+  .track-artist {
+    font-size: 0.75rem;
+  }
+}
