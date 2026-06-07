@@ -1,4 +1,4 @@
-import { Track } from '../App';
+import type { Track } from '../App';
 import './Player.css';
 
 interface PlayerProps {

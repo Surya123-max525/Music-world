@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { searchTracks } from '../services/spotifyApi';
-import { Track } from '../App';
+import type { Track } from '../App';
 import './Search.css';
 
 interface SearchProps {

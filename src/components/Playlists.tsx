@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getUserPlaylists, getPlaylistTracks } from '../services/spotifyApi';
-import { Track } from '../App';
+import type { Track } from '../App';
 import './Playlists.css';
 
 interface PlaylistData {
